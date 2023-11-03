@@ -27,7 +27,7 @@ func newRedisClient(redisUrl string) (*redis.Client, error) {
 	return client, nil
 }
 
-func NewMongoRepository(redisURL string) (shortener.RedirectRepository, error) {
+func NewRedisRepository(redisURL string) (shortener.RedirectRepository, error) {
 	repo := &redisRepository{}
 
 	client, err := newRedisClient(redisURL)
